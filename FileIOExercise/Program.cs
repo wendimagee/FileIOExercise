@@ -11,11 +11,7 @@ namespace FileIOExercise
     {
         static void Main(string[] args)
         {
-          
-
-            //Relative File - relative to the current project (bin folder) 
-            //Bin/Debug is the root folder
-            string filePath = @"C:\Users\wendi\source\repos\FileIOExercise\FileIOExercise";
+            string filePath = @"C:\Users\wendi\source\repos\FileIOExercise\FileIOExercise\bin\Debug\Countries.txt";
 
             Console.WriteLine(filePath);
             //We to need save, the way you do that is via a streamWriter 
@@ -30,7 +26,7 @@ namespace FileIOExercise
                 List<string> existingCountries = fileOutput.Split(',').ToList();
 
                 Console.WriteLine("Existing Countries in the file: ");
-                //PrintCountryList(existingCountries);
+                PrintCountryList(existingCountries);
 
                 Console.WriteLine("Please input a country name");
                 string inputCountry = Console.ReadLine();
@@ -69,12 +65,12 @@ namespace FileIOExercise
 
         }
 
-        //public static void PrintCountryList(List<string> countries)
-        //{
-        //    foreach (string country in countries)
-        //    {
-        //        Console.WriteLine(country.Trim());
-        //    }
-        //}
+        public static void PrintCountryList(List<string> countries)
+        {
+            foreach (string country in countries)
+            {
+                Console.WriteLine(country.Trim());
+            }
+        }
     }
 }
